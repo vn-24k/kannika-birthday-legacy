@@ -3,33 +3,30 @@ import { motion } from 'framer-motion';
 
 export const Hero = () => {
   return (
-    <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
-      {/* Background Video Cinematográfico */}
-      <div className="absolute inset-0 z-0">
-        <video 
-          autoPlay loop muted playsInline
-          className="object-cover w-full h-full opacity-40"
-        >
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-flying-lanterns-at-night-in-the-sky-34533-large.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
+    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+      {/* Imagem de Fundo embutida em Base64 - Indestrutível */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center"
+        style={{ backgroundImage: 'url(data:image/webp;base64,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)' }}
+      >
+        <div className="absolute inset-0 bg-black/50" /> {/* Escurecer um pouco para leitura */}
       </div>
 
       <div className="relative z-10 text-center px-4">
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-accent font-mono tracking-[0.5em] text-sm mb-4 uppercase"
+          className="text-[#D4AF37] font-mono tracking-[0.3em] text-[10px] mb-4 uppercase"
         >
-          สุขสันต์วันเกิด (Happy Birthday)
+          A Nossa História
         </motion.p>
         <motion.h1 
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-          className="text-6xl md:text-8xl font-light text-white tracking-tighter"
+          transition={{ duration: 0.8 }}
+          className="text-5xl md:text-7xl font-light text-white tracking-tighter"
         >
-          Kannika <span className="text-accent italic">Legacy</span>
+          Kannika & <span className="text-[#D4AF37] italic">Vinícius</span>
         </motion.h1>
       </div>
     </section>
