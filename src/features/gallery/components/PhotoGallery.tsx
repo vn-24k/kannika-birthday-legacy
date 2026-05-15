@@ -1,7 +1,6 @@
 'use client'
 import { motion } from 'framer-motion';
 
-// Aqui você coloca o nome dos arquivos que você moveu para public/images
 const images = [
   { id: 1, url: '/images/kannika-1.jpg', title: 'O teu sorriso' },
   { id: 2, url: '/images/kannika-2.jpg', title: 'Nossos momentos' },
@@ -32,7 +31,7 @@ export const PhotoGallery = () => {
         className="text-center mb-16"
       >
         <h3 className="text-accent uppercase tracking-widest text-sm mb-2">Momentos</h3>
-        <h2 className="text-4xl font-light">Memórias Guardadas</h2>
+        <h2 className="text-4xl font-light text-white">Memórias Guardadas</h2>
       </motion.div>
 
       <motion.div 
@@ -63,3 +62,4 @@ export const PhotoGallery = () => {
       </motion.div>
     </section>
   );
+};
