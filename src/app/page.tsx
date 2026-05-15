@@ -5,14 +5,13 @@ import { AudioPlayer } from '@/features/audio/AudioPlayer';
 
 export default function Home() {
   return (
-    <main className="relative bg-black select-none">
+    <main className="relative bg-black">
       <AudioPlayer />
       <Hero />
       <Message />
       <PhotoGallery />
-      
       <footer className="py-10 text-center opacity-20">
-        <p className="text-[10px] tracking-[0.5em] uppercase">V & K • Forever</p>
+        <p className="text-[10px] tracking-[0.5em] uppercase text-white">V & K • Forever</p>
       </footer>
     </main>
   );
